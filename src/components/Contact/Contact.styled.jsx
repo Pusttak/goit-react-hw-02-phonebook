@@ -1,26 +1,28 @@
-.contact {
+import styled from '@emotion/styled';
+
+export const ContactWrap = styled.p`
   display: flex;
   padding: 2px;
   transition: 0.3s;
   cursor: context-menu;
-}
 
-.contact:hover {
-  background-color: rgba(242, 56, 127, 0.084);
-  border-radius: 4px;
-}
+  :hover {
+    background-color: rgba(242, 56, 127, 0.084);
+    border-radius: 4px;
+  }
+`;
 
-.name {
+export const Name = styled.span`
   margin-right: 10px;
   max-width: 50%;
-}
+`;
 
-.number {
+export const Number = styled.span`
   margin-left: auto;
   color: rgba(155, 53, 102, 0.849);
-}
+`;
 
-.button__delete {
+export const ButtonDelete = styled.button`
   display: block;
   margin-left: 20px;
   color: white;
@@ -31,9 +33,9 @@
   cursor: pointer;
   border: none;
   transition: 0.3s;
-}
 
-.button__delete:hover {
-  background-color: rgba(210, 3, 41, 0.552);
-  transform: scale(1.2);
-}
+  :hover {
+    background-color: rgba(210, 3, 41, 0.552);
+    transform: scale(1.2);
+  }
+`;

@@ -1,8 +1,8 @@
 import Contact from 'components/Contact';
-import css from 'components/ContactList/ContactList.module.css';
+import { List } from './ContactList.styled.jsx';
 
 const ContactList = ({ contacts, onDeleteContact }) => (
-  <ul className={css.list}>
+  <List>
     {contacts.length ? (
       contacts.map(({ name, number, id }) => (
         <li key={id}>
@@ -17,7 +17,7 @@ const ContactList = ({ contacts, onDeleteContact }) => (
     ) : (
       <p>Phonebook is empty</p>
     )}
-  </ul>
+  </List>
 );
 
 export default ContactList;

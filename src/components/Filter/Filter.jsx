@@ -1,16 +1,10 @@
-import css from 'components/Filter/Filter.module.css';
+import { Label, Input } from './Filter.styled.jsx';
 
 const Filter = ({ onChange, filterValue }) => (
-  <label className={css.label}>
+  <Label>
     Find contacts by name
-    <input
-      className={css.filter}
-      type="text"
-      name="filter"
-      onChange={onChange}
-      value={filterValue}
-    />
-  </label>
+    <Input type="text" name="filter" onChange={onChange} value={filterValue} />
+  </Label>
 );
 
 export default Filter;

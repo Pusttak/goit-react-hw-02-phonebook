@@ -1,19 +1,18 @@
-import css from 'components/Contact/Contact.module.css';
+import { ContactWrap, Name, Number, ButtonDelete } from './Contact.styled.jsx';
 
 const Contact = ({ name, number, id, onDeleteContact }) => (
-  <p className={css.contact}>
-    <span className={css.name}>{name}:</span>
-    <span className={css.number}>{number}</span>
-    <button
+  <ContactWrap>
+    <Name>{name}:</Name>
+    <Number>{number}</Number>
+    <ButtonDelete
       type="button"
       onClick={() => {
         onDeleteContact(id);
       }}
-      className={css.button__delete}
     >
       x
-    </button>
-  </p>
+    </ButtonDelete>
+  </ContactWrap>
 );
 
 export default Contact;

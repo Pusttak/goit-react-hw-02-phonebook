@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { nanoid } from 'nanoid';
-import ContactForm from './ContactForm';
-import ContactList from './ContactList';
-import Filter from './Filter';
-import css from './App.module.css';
+import ContactForm from '../ContactForm';
+import ContactList from '../ContactList';
+import Filter from '../Filter';
+import { Container, Title, Subtitle } from './App.styled.jsx';
 
 export class App extends Component {
   state = {
@@ -67,7 +67,6 @@ export class App extends Component {
 
   render() {
     const { filter } = this.state;
-    const filteredContacts = this.visibleContacts();
 
     return (
       <div
@@ -81,17 +80,17 @@ export class App extends Component {
           color: '#010101',
         }}
       >
-        <div className={css.section}>
-          <h1 className={css.title}>Phonebook</h1>
+        <Container>
+          <Title>Phonebook</Title>
           <ContactForm onSubmit={this.addContact} />
 
-          <h2 className={css.title}>Contacts</h2>
+          <Subtitle>Contacts</Subtitle>
           <Filter onChange={this.handleChangeFilter} filterValue={filter} />
           <ContactList
-            contacts={filteredContacts}
+            contacts={this.visibleContacts()}
             onDeleteContact={this.contactDelete}
           />
-        </div>
+        </Container>
       </div>
     );
   }

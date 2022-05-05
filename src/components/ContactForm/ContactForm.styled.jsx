@@ -1,20 +1,22 @@
-.form {
+import styled from '@emotion/styled';
+
+export const Form = styled.form`
   border: 4px solid rgba(67, 114, 153, 0.378);
   border-radius: 6px;
   padding: 20px 25px 5px;
   margin-bottom: 25px;
-}
+`;
 
-.label {
+export const Label = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
   color: rgba(67, 114, 153, 0.727);
-}
+`;
 
-.input {
+export const Input = styled.input`
   border: 2px solid rgb(128, 158, 182);
   height: 25px;
   border-radius: 4px;
@@ -24,9 +26,9 @@
   color: rgb(67, 114, 153);
   padding: 5px 10px;
   outline: none;
-}
+`;
 
-.button {
+export const Button = styled.button`
   display: block;
   padding: 10px 20px;
   border-radius: 4px;
@@ -38,8 +40,8 @@
   transition: 0.3s;
   font-size: 16px;
   font-weight: 600;
-}
 
-.button:hover {
-  background-color: rgb(60, 100, 132);
-}
+  :hover {
+    background-color: rgb(60, 100, 132);
+  }
+`;
