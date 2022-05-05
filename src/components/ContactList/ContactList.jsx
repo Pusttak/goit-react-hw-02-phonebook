@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Contact from 'components/Contact';
 import { List } from './ContactList.styled.jsx';
 
@@ -21,3 +22,8 @@ const ContactList = ({ contacts, onDeleteContact }) => (
 );
 
 export default ContactList;
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
+};
